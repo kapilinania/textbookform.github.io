@@ -46,6 +46,53 @@
             -webkit-box-shadow: 0 -1px 2px rgba(0,0,0,.2);
             box-shadow: 0 -1px 2px rgba(0,0,0,.2);
         }
+        .backNext{
+            border: 0px solid red;
+            width: 83.3%;
+        }
+        .mock_top{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+        ul li{
+            list-style: none;
+        }
+        .answer{
+           padding: 0px 15px 0px 0px;
+            border: 1px solid black;
+            margin-right: 10px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .visited{
+            padding: 0px 17px 0px 0px;
+            border: 0px solid black;
+            margin-right: 10px;
+            border-radius: 10px 10px 0px 0px;
+            background-color: rgb(151, 149, 151);
+        }
+        .not_answer{
+           padding: 0px 17px 0px 0px;
+            border: 0px solid black;
+            margin-right: 10px;
+            border-radius: 10px 10px 0px 0px;
+            background-color: rgb(254, 2, 2);
+        }
+        .question_mark{
+            padding: 0px 17px 0px 0px;
+            border: 0px solid black;
+            margin-right: 10px;
+            border-radius: 10px 10px 0px 0px;
+            background-color: purple;
+        }
+        .answer_mark{
+            padding: 0px 17px 0px 0px;
+            border: 1px solid rgb(4, 161, 251);
+            margin-right: 10px;
+            border-radius: 10px 10px 0px 0px;
+            background-color: rgb(4, 161, 251);
+        }
        
 
 
@@ -55,20 +102,23 @@
   </head>
   <body>
     <div class="container-fluid header_section">
+        <div class="row bg-light  p-3 mock_top">
+            <div class="col-12">Junior Executive (Common Cadre) Full Mock Test</div>
+        </div>
        <div class="row">
         <div class="col-10">
             
-            <div class="head_inside pt-2 pb-2 pl-3 pr-3">
+            <div class="head_inside pt-2 pb-5 pl-3 pr-3">
                 <h4>General Instructions</h4>
                 <p>1. The clock will be set at the server. The countdown timer at the top right corner of screen will display the remaining time available for you to complete the examination. When the timer reaches zero, the examination will end by itself. You need not terminate the examination or submit your paper.</p>
                 <p>2.The Question Palette displayed on the right side of screen will show the status of each question using one of the following symbols:</p>
-                <ol>
-                    <li>You have not visited the question yet.</li>
-                    <li> You have not answered the question.</li>
-                    <li> You have answered the question.</li>
-                    <li>You have NOT answered the question, but have marked the question for review.</li>
-                    <li>You have answered the question, but marked it for review.</li>
-                </ol>
+                <ul type="">
+                    <li> <span class="visited"></span>You have not visited the question yet.</li>
+                    <li>  <span class="not_answer"></span>You have not answered the question.</li>
+                    <li>  <span class="answer"></span>You have answered the question.</li>
+                    <li> <span class="question_mark"></span>You have NOT answered the question, but have marked the question for review.</li>
+                    <li> <span class="answer_mark"></span>You have answered the question, but marked it for review.</li>
+                </ul>
                 <p>The Mark For Review status for a question simply indicates that you would like to look at that question again. If a question is answered, but marked for review, then the answer will be considered for evaluation unless the status is modified by the candidate.</p>
                 <b>Navigating to a Question :</b>
                 <p>3.Navigating to a Question :</p>
@@ -101,9 +151,13 @@
                 <p>10. After clicking the Save & Next button for the last question in a Section, you will automatically be taken to the first question of the next Section in sequence.</p>
                 <p>11. You can move the mouse cursor over the name of a Section to view the answering status for that Section.</p>
             </div>
-            <div class="footer_nav d-flex justify-content-between ">
-                <div>Back to Last</div>
-                <div>Next</div>
+            <div class="footer_nav d-flex justify-content-between backNext">
+                <div class=" mb-2">
+                    <a href="1.html"><button type="submit" class="btn btn-warning">Previous</button></a>
+                </div>
+                <div class=" mb-2">
+                    <a href="2.html"> <button type="submit" class="btn btn-primary">Next</button></a>
+                </div>
             </div>
         </div>
         <div class="col-2  right_bar">
